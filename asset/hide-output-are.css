@@ -1,0 +1,7 @@
+.jp-OutputArea-output {
+    opacity: 0;
+}
+
+.jp-OutputArea-output.clicked {
+    opacity: 1;
+}
