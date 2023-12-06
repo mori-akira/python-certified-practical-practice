@@ -14,6 +14,6 @@ const createMaskBlockAction = () => {
 $(() => {
     createMaskBlockAction();
     $('.jp-OutputArea-output').each((_, e) => {
-        $(e).toggleClass('focused');
+        $(e).click(() => $(e).toggleClass('focused'));
     });
 });
