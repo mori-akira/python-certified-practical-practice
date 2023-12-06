@@ -13,4 +13,7 @@ const createMaskBlockAction = () => {
 
 $(() => {
     createMaskBlockAction();
+    $('.jp-OutputArea-output').each((i, e) => {
+        $(e).click(() => window.alert('clicked!'));
+    });
 });
