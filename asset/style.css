@@ -131,7 +131,7 @@ pre {
     border-left: 4px solid #333 !important;
 }
 
-pre > code {
+pre>code {
     font-size: 1rem;
     background-color: #00000000 !important;
 }
@@ -189,4 +189,9 @@ button {
 
 button:hover {
     background-color: #C54533;
+}
+
+.jp-OutputArea-output pre {
+    white-space: unset !important;
+    overflow-x: scroll !important;
 }
