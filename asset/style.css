@@ -192,6 +192,6 @@ button:hover {
 }
 
 .jp-OutputArea-output pre {
-    white-space: unset !important;
+    white-space: pre !important;
     overflow-x: scroll !important;
 }
