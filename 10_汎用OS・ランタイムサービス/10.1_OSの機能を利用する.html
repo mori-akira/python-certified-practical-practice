@@ -5,11 +5,11 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>sample</title>
+  <title>01_OSの機能を利用する</title>
+  <link rel="stylesheet" href="../asset/style.css">
+  <link rel="stylesheet" href="../asset/masked-block.css">
+  <link rel="stylesheet" href="../asset/hide-output-are.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-  <link rel="stylesheet" href="asset/style.css">
-  <link rel="stylesheet" href="asset/masked-block.css">
-  <link rel="stylesheet" href="asset/hide-output-are.css">
   <style type="text/css">
     pre {
       line-height: 125%;
@@ -7632,7 +7632,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
   <main>
-    <div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bf0bb295-f71b-446f-94fc-eff0ec5b9d95">
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -7641,7 +7641,14 @@ all of MD as it is not optimized for dense, information rich UIs.
           <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
             <div class="cm-editor cm-s-jupyter">
               <div class="highlight hl-ipython3">
-                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'hello jupyter notebook!'</span><span class="p">)</span>
+                <pre><span></span><span class="c1"># 環境変数</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'HOMEPATH'</span><span class="p">])</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'TEMP'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'hoge'</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">'TEMP'</span><span class="p">))</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">'TEMP'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">'TEMP'</span><span class="p">))</span>
 </pre>
               </div>
             </div>
@@ -7655,14 +7662,17 @@ all of MD as it is not optimized for dense, information rich UIs.
           <div class="jp-OutputArea-child">
             <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
             <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-              <pre>hello jupyter notebook!
+              <pre>environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\kgrmr\\AppData\\Roaming', 'APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL': '1', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_8960_EMWMKSNMPHGXTCIW', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': '木暮のPC', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'EFC_14436': '1', 'ELECTRON_RUN_AS_NODE': '1', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\kgrmr', 'JAVA_HOME': 'C:\\java\\jdk-17', 'JPY_INTERRUPT_EVENT': '2508', 'LOCALAPPDATA': 'C:\\Users\\kgrmr\\AppData\\Local', 'LOGONSERVER': '\\\\木暮のPC', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\kgrmr\\OneDrive', 'ONEDRIVECONSUMER': 'C:\\Users\\kgrmr\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'c:\\Users\\kgrmr\\AppData\\Local\\Microsoft\\WindowsApps;c:\\Users\\kgrmr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\nodejs\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\java\\jdk-17\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\kgrmr\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\kgrmr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\kgrmr\\AppData\\Roaming\\npm;C:\\Users\\kgrmr\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\kgrmr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\Scripts;;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\nodejs\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\java\\jdk-17\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\kgrmr\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\kgrmr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\kgrmr\\AppData\\Roaming\\npm;C:\\Users\\kgrmr\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\kgrmr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\Scripts;', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 154 Stepping 3, GenuineIntel', 'PROCESSOR_LEVEL': '6', 'PROCESSOR_REVISION': '9a03', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING': '1', 'PYTHONIOENCODING': 'utf-8', 'PYTHONUNBUFFERED': '1', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\kgrmr\\AppData\\Local\\Temp', 'TMP': 'hoge', 'USERDOMAIN': '木暮のPC', 'USERDOMAIN_ROAMINGPROFILE': '木暮のPC', 'USERNAME': 'kgrmr', 'USERPROFILE': 'C:\\Users\\kgrmr', 'VSCODE_AMD_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'VSCODE_CODE_CACHE_PATH': 'C:\\Users\\kgrmr\\AppData\\Roaming\\Code\\CachedData\\1a5daa3a0231a0fbba4f14db7ec463cf99d7768e', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'VSCODE_CWD': 'C:\\Users\\kgrmr\\OneDrive\\ドキュメント\\GitHub\\python-certified-practical-practice', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'VSCODE_IPC_HOOK': '\\\\.\\pipe\\2d9303ac0ed9e2d17b7b976e15e5731b-1.84.2-main-sock', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'VSCODE_NLS_CONFIG': '{"locale":"en-us","osLocale":"ja","availableLanguages":{},"_languagePackSupport":true}', 'VSCODE_PID': '8960', 'WINDIR': 'C:\\Windows', 'ZES_ENABLE_SYSMAN': '1', 'PYTHONUSERBASE': 'C:\\Users\\kgrmr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages', 'PYDEVD_USE_FRAME_EVAL': 'NO', 'TERM': 'xterm-color', 'CLICOLOR': '1', 'FORCE_COLOR': '1', 'CLICOLOR_FORCE': '1', 'PAGER': 'cat', 'GIT_PAGER': 'cat', 'MPLBACKEND': 'module://matplotlib_inline.backend_inline'})
+\Users\kgrmr
+hoge
+None
 </pre>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=24095082">
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -7670,25 +7680,367 @@ all of MD as it is not optimized for dense, information rich UIs.
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-            <h2 id="Python%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E7%AE%A1%E7%90%86">Pythonパッケージの管理<a
-                class="anchor-link"
-                href="#Python%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E7%AE%A1%E7%90%86">¶</a></h2>
             <h3
-              id="pip%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AE%E5%B0%8E%E5%85%A5">
-              pipがインストールされていない環境での導入<a class="anchor-link"
-                href="#pip%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AE%E5%B0%8E%E5%85%A5">¶</a>
+              id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A8%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E6%93%8D%E4%BD%9C">
+              ファイルとディレクトリの操作<a class="anchor-link"
+                href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A8%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E6%93%8D%E4%BD%9C">¶</a>
             </h3>
-            <pre><code>
-python -m <m-b>ensurepip</m-b>
-</code></pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>関数名</th>
+                  <th>戻り値</th>
+                  <th>環境</th>
+                  <th>pathlibにある同等の関数</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><m-b>chdir(path)</m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td>-</td>
+                  <td>現在の作業ディレクトリをpathに変更する</td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      chmod(path, mode, *,<br />
+                      dir_fd=None,<br />
+                      follow_symlinks=True)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix</td>
+                  <td><m-b>Path.chmod()</m-b></td>
+                  <td>pathで指定したファイルまたはディレクトリのモードを変更する</td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      chown(path, uid, gid, *,<br />
+                      dir_fd=None,<br />
+                      follow_symlinks=True)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix</td>
+                  <td>-</td>
+                  <td>pathで指定したファイルまたはディレクトリの所有者とグループを指定する</td>
+                </tr>
+                <tr>
+                  <td><m-b>getcwd()</m-b></td>
+                  <td><m-b>str</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.cwd()</m-b></td>
+                  <td>現在の作業ディレクトリを取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>listdir(path='.')</m-b></td>
+                  <td><m-b>list</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.iterdir()</m-b></td>
+                  <td>pathで指定したディレクトリ内のファイルとディレクトリを取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      mkdir(path, mode=0o777, *,<br />
+                      dir_fd=None)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.mkdir()</m-b></td>
+                  <td>pathで指定したディレクトリを作成する</td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      makedirs(name, mode=0o777,<br />
+                      exist_ok=False)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.mkdir()</m-b></td>
+                  <td>
+                    nameで指定したディレクトリを再帰的に作成する<br />
+                    末端ディレクトリのみでなく中間ディレクトリも作成する。
+                  </td>
+                </tr>
+                <tr>
+                  <td><m-b>remove(path, *, dir_fd=None)</m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.unlink()</m-b></td>
+                  <td>
+                    pathで指定されたファイルを削除する<br />
+                    ディレクトリの場合は<m-b>OSError</m-b>が送出される。
+                  </td>
+                </tr>
+                <tr>
+                  <td><m-b>removedirs(name)</m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td>-</td>
+                  <td>nameで指定したディレクトリの末端から再帰的に削除する</td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      rename(src, dst, *,<br />
+                      src_dir_fd=None,<br />
+                      dst_dir_fd=None)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.rename()</m-b></td>
+                  <td>ファイルまたはディレクトリのパスをsrcからdstに変更する</td>
+                </tr>
+                <tr>
+                  <td><m-b>renames(old, new)</m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td>-</td>
+                  <td>
+                    ファイルまたはディレクトリパスをoldからnewに変更する<br />
+                    newで指定したパスは中間ディレクトリも含めて作成され、oldで指定したディレクトリは再帰的に削除される。
+                  </td>
+                </tr>
+                <tr>
+                  <td><m-b>rmdir(path, *, dir_fd=None)</m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.rmdir()</m-b></td>
+                  <td>
+                    pathで指定したディレクトリを削除する<br />
+                    ディレクトリが空でない場合は<m-b>OSError</m-b>を送出する。
+                  </td>
+                </tr>
+                <tr>
+                  <td><m-b>
+                      symlink(src, dst,<br />
+                      target_is_directory=False,<br />
+                      *, dir_fd=None)
+                    </m-b></td>
+                  <td><m-b>None</m-b></td>
+                  <td>Unix、Windows</td>
+                  <td><m-b>Path.symlink_to()</m-b></td>
+                  <td>
+                    srcを参照するシンボリックリンクをdstで指定したファイル名で作成する<br />
+                    target_is_directoryはWindowsのみで使用でき、Trueならディレクトリとして、Falseならファイルとして作成する。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">'../09_データ型とアルゴリズム/'</span><span class="p">))</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>c:\Users\kgrmr\OneDrive\ドキュメント\GitHub\python-certified-practical-practice\10_汎用OS・ランタイムサービス
+['9.1_ソート.html', '9.1_ソート.ipynb', '9.2_さまざまなコンテナ型を扱う.html', '9.2_さまざまなコンテナ型を扱う.ipynb', '9.4_列挙型による定数の定義を行う.html', '9.4_列挙型による定数の定義を行う.ipynb', '9.6_イテレーターの組み合わせで処理を組み立てる.html', '9.6_イテレーターの組み合わせで処理を組み立てる.ipynb', '9.7_ミュータブルなオブジェクトをコピーする.html', '9.7_ミュータブルなオブジェクトをコピーする.ipynb']
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="c1"># ファイルパス関連の定数</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>  <span class="c1"># カレンとディレクトリ</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">)</span>  <span class="c1"># 親ディレクトリ</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>     <span class="c1"># パスの区切り文字</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">extsep</span><span class="p">)</span>  <span class="c1"># ファイル名と拡張子の区切り文字</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span> <span class="c1"># 改行文字</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>.
+..
+\
+.
+
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <h3
+              id="OS%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%83%85%E5%A0%B1%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89/%E5%AE%9A%E6%95%B0(UNIX)">
+              OSシステム情報にアクセスするメソッド/定数(UNIX)<a class="anchor-link"
+                href="#OS%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%83%85%E5%A0%B1%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89/%E5%AE%9A%E6%95%B0(UNIX)">¶</a>
+            </h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>関数</th>
+                  <th>戻り値</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><m-b>confstr(name)</m-b></td>
+                  <td><m-b>str</m-b></td>
+                  <td>システム設定値を文字列で取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>confstr_names</m-b></td>
+                  <td><m-b>dict</m-b></td>
+                  <td>confstr()に渡すことのできる値を定義した辞書を取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>sysconf(name)</m-b></td>
+                  <td><m-b>int</m-b></td>
+                  <td>システム設定値を数値で取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>sysconf_names</m-b></td>
+                  <td><m-b>dict</m-b></td>
+                  <td>sysconf()に渡すことのできる値を定義した辞書を取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>cpu_count()</m-b></td>
+                  <td><m-b>int</m-b></td>
+                  <td>CPU数を取得する</td>
+                </tr>
+                <tr>
+                  <td><m-b>getloadavg()</m-b></td>
+                  <td><m-b>(float, float, float)</m-b></td>
+                  <td>過去1分間、5分間、15分間のロードアベレージをタプルで取得する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="c1"># ランダム文字列の生成</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>b'\xde\xda\xf9\x08\xc1~2\xdc\xa2\xdb\x90\xc8^\x84\rf'
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="c1"># 一時的にumaskを書き換える</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">old</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">umask</span><span class="p">(</span><span class="mo">0o777</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">oct</span><span class="p">(</span><span class="n">old</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./hoge/fuga/piyo'</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">umask</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">oct</span><span class="p">(</span><span class="n">new</span><span class="p">))</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>0
+0o0
+384
+0o600
+</pre>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <script src="asset/jquery-3.7.1.slim.min.js"></script>
-  <script src="asset/masked-block.js"></script>
-  <script src="asset/hide-output-area.js"></script>
+  <script src="../asset/jquery-3.7.1.slim.min.js"></script>
+  <script src="../asset/masked-block.js"></script>
+  <script src="../asset/hide-output-area.js"></script>
 </body>
 
 </html>
