@@ -1,0 +1,4 @@
+テキストファイルからdiv()をテスト
+>>> from test1 import div
+>>> div(6, 2)
+4.0
