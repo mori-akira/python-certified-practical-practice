@@ -194,3 +194,7 @@ button:hover {
 .jp-OutputArea-output pre {
     white-space: pre !important;
 }
+
+.jp-InputArea pre {
+    overflow-y: auto !important;
+}
