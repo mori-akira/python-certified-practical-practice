@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>6.1_一般的な文字列操作を行う-str、string</title>
+  <title>6.1_一般的な文字列操作を行う</title>
   <link rel="stylesheet" href="../asset/style.css">
   <link rel="stylesheet" href="../asset/masked-block.css">
   <link rel="stylesheet" href="../asset/hide-output-are.css">
@@ -7734,14 +7734,43 @@ de5de6ed-2d7b-4290-9b65-8768094d60ae
                 <pre><span></span><span class="c1"># 文字列のチェックメソッド</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'hoge+fuga'</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'h0ge'</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'あいうえお'</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="n">tmp</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">())</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>True
+False
+True
+False
+True
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="n">tmp</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">())</span>
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'123'</span><span class="p">)</span>
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'-123'</span><span class="p">)</span>
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'123.456'</span><span class="p">)</span>
@@ -7749,26 +7778,148 @@ de5de6ed-2d7b-4290-9b65-8768094d60ae
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'①②③'</span><span class="p">)</span>
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'ⅠⅡⅢ'</span><span class="p">)</span>
 <span class="n">tmp</span><span class="p">(</span><span class="s1">'百二十三'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'aaa'</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>123        True True True
+-123       False False False
+123.456    False False False
+１２３        True True True
+①②③        False True True
+ⅠⅡⅢ        False False True
+百二十三       False False True
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'aaa'</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'123'</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'___'</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'_%_'</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'abcde'</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>True
+False
+True
+False
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'abcde'</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'ABCDE'</span><span class="o">.</span><span class="n">isupper</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'ABcde'</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'   '</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>True
+True
+False
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'   '</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\t\t\t</span><span class="s1">'</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\r\n</span><span class="s1">'</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'  xx  xx '</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Title'</span><span class="o">.</span><span class="n">istitle</span><span class="p">())</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>True
+True
+True
+False
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Title'</span><span class="o">.</span><span class="n">istitle</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'TITLE'</span><span class="o">.</span><span class="n">istitle</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'title.'</span><span class="o">.</span><span class="n">istitle</span><span class="p">())</span>
 </pre>
@@ -7785,35 +7936,6 @@ de5de6ed-2d7b-4290-9b65-8768094d60ae
             <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
             <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
               <pre>True
-False
-
-True
-False
-True
-
-123        True True True
--123       False False False
-123.456    False False False
-１２３        True True True
-①②③        False True True
-ⅠⅡⅢ        False False True
-百二十三       False False True
-
-True
-False
-True
-False
-
-True
-True
-False
-
-True
-True
-True
-False
-
-True
 False
 False
 </pre>
@@ -7840,15 +7962,6 @@ False
 <span class="nb">print</span><span class="p">(</span><span class="s1">'abcdefg'</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'cde'</span><span class="p">,</span> <span class="s1">'CDE'</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'abcdefg'</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'CDE'</span><span class="p">,</span> <span class="s1">'CDE'</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'abcdefgabcdefgabcdefg'</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'cde'</span><span class="p">,</span> <span class="s1">'CDE'</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'  xx  xx  '</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\t\r\n</span><span class="s1">xx</span><span class="se">\t\t</span><span class="s1">xx</span><span class="se">\r\r\r</span><span class="s1">'</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyxxxxxyyyy'</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">'x'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyxxxxxyyyy'</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">'y'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyzxxxxxyyyy'</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'xy'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'1234'</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
 </pre>
               </div>
             </div>
@@ -7870,12 +7983,77 @@ Abcd Efgh Ijkl Mnop
 abCDEfg
 abcdefg
 abCDEfgabCDEfgabcdefg
-xx  xx
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'  xx  xx  '</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\t\r\n</span><span class="s1">xx</span><span class="se">\t\t</span><span class="s1">xx</span><span class="se">\r\r\r</span><span class="s1">'</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyxxxxxyyyy'</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">'x'</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyxxxxxyyyy'</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">'y'</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'xxxxyyyyzxxxxxyyyy'</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'xy'</span><span class="p">))</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>xx  xx
 xx		xx
 yyyyxxxxxyyyy
 xxxxyyyyxxxxx
 z
-00001234
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+          <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+            <div class="cm-editor cm-s-jupyter">
+              <div class="highlight hl-ipython3">
+                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'1234'</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'hoge'</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-Cell-outputWrapper">
+        <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+        </div>
+        <div class="jp-OutputArea jp-Cell-outputArea">
+          <div class="jp-OutputArea-child">
+            <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+              <pre>00001234
 hoge    
     hoge
   hoge  
@@ -8069,8 +8247,7 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </tr>
                 <tr>
                   <td><m-b>replace(old, new[, count])</m-b></td>
-                  <td>文字列を置換/td&gt;
-                  </td>
+                  <td>文字列を置換</td>
                 </tr>
                 <tr>
                   <td><m-b>strip([chars])</m-b></td>
@@ -8078,11 +8255,11 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </tr>
                 <tr>
                   <td><m-b>lstrip([chars])</m-b></td>
-                  <td>先頭/末尾の指定した文字(されなければ空白文字)を除去</td>
+                  <td>先頭の指定した文字(されなければ空白文字)を除去</td>
                 </tr>
                 <tr>
                   <td><m-b>rstrip([chars])</m-b></td>
-                  <td>先頭/末尾の指定した文字(されなければ空白文字)を除去</td>
+                  <td>末尾の指定した文字(されなければ空白文字)を除去</td>
                 </tr>
                 <tr>
                   <td><m-b>zfill(width)</m-b></td>
@@ -8129,7 +8306,10 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
                   <td>指定した接尾辞を持つか</td>
                 </tr>
                 <tr>
-                  <td><m-b>encode(encoding='utf-8', errors='strict')</m-b></td>
+                  <td>
+                    <m-b>encode(encoding='utf-8',<br />
+                      errors='strict')</m-b>
+                  </td>
                   <td>文字列をエンコードする</td>
                 </tr>
               </tbody>
